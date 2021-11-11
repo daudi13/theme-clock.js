@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Ubuntu:ital,wght@0,700;1,400&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #000;
+    --secondary-color: #fff;
+}
+
+
+html.dark {
+    --primary-color: #fff;
+    --secondary-color: #000;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
+    overflow: hidden;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--secondary-color);
+    transition: all 0.5s ease;
+}
+
+.toggle {
+    border: none;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 8px 13px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    top: 100px;
+    transition: all 0.5s ease;
+}
+
+.toggle:focus {
+    outline: none;
+}
+
+.toggle:active {
+    transform: scale(0.9);
+}
+
+.clock {
+    height: 300px;
+    width: 300px;
+    background: #666;
+    border-radius: 50%;
+    position: relative;
+}
+
+.clock .needle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: bottom center;
+}
+
+.hour {
+    height: 90px;
+    width: 5px;
+    background-color: var(--primary-color);
+}
+
+.minute {
+    height: 115px;
+    width: 5px;
+    background-color: var(--primary-color);
+}
+
+.second {
+    height: 120px;
+    width: 5px;
+    background-color: tomato;
+}
+
+.clock-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 400px;
+}
+
+.clock-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    background-color: tomato;
+}
+
+.clock-center::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-55%, -50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+}
+
+.time {
+    font-size: 6rem;
+    color: var(--primary-color);
+}
+
+.date {
+    font-size: 15px;
+    color: #555;
+}
+
+.date .circle {
+    height: 20px;
+    width: 20px;
+    background-color: var(--primary-color);
+    padding: 3px;
+    border-radius: 50%;
+    color: var(--secondary-color);
+}
+
+
+.btn {
+    border: none;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 8px 15px;
+    border-radius: 5px;
+    position: absolute;
+    top: 150px;
+    transition: all 0.5s ease;
+}
+
